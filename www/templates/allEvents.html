@@ -1,3 +1,9 @@
 <ion-view title="All Events" id="page11" class=" ">
-    <ion-content padding="true" class="has-header"></ion-content>
+      <ion-content padding="true" class="has-header">
+        <ion-list id="parties-list3" class=" ">
+            <ion-item ng-repeat="party in parties | filter: filterDate()">
+              {{party.day}}/{{party.month}}/{{party.year}} - {{party.name}}
+            </ion-item>
+        </ion-list>
+    </ion-content>
 </ion-view>
