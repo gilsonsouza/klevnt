@@ -7,11 +7,13 @@ angular.module('app.controllers', [])
 .controller('partiesCtrl', function($scope, $state, Parties, DetailsParty) {
   $scope.parties = Parties;
   $scope.getDatetime = new Date();
-  $scope.setDetails = function(party){
-         DetailsParty = party;
-         $state.go('tabsController.page5');
-                 //and your redirection stuff goes here.
-     };
+  console.log($scope.getDatetime);
+  $scope.setDetails = function(party)
+  {
+    DetailsParty.set(party);
+    $state.go('tabsController.page5');
+    //and your redirection stuff goes here.
+  };
 })
 
 .controller('cultureCtrl', function($scope) {
@@ -19,7 +21,8 @@ angular.module('app.controllers', [])
 })
 
 .controller('page5Ctrl', function($scope, DetailsParty) {
-  $scope.party = DetailsParty;
+  $scope.party = DetailsParty.get();
+  //console.log($scope.party);
 })
 
 .controller('page9Ctrl', function($scope) {

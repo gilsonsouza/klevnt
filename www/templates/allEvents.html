@@ -2,7 +2,9 @@
       <ion-content padding="true" class="has-header">
         <ion-list id="parties-list3" class=" ">
             <ion-item ng-repeat="party in parties | filter: filterDate()">
-              {{party.day}}/{{party.month}}/{{party.year}} - {{party.name}}
+              <i class="ion-calendar"></i> {{party.day}}.{{party.month}}.{{party.year}}<br />
+              <i class="ion-location"></i><b> {{party.local}}</b><br />
+              {{party.name}}
             </ion-item>
         </ion-list>
     </ion-content>

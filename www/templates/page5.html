@@ -1,8 +1,19 @@
-<ion-view title="" id="page5" class=" ">
-    <ion-content padding="true" class="has-header">
-        <div class="">
-          a
-          {{party.name}}
-        </div>
-    </ion-content>
+<ion-view title="" id="page5" class="">
+  <ion-content padding="true" class="has-header">
+    <div class="list card">
+      <div class="item item-avatar">
+        <img src="mcfly.jpg">
+        <h2>{{party.name}}</h2>
+        <p><i class="ion-calendar"></i> {{party.day}}.{{party.month}}.{{party.year}}</p>
+        <p><i class="ion-location"></i> {{party.local}} ({{party.address}})</p>
+        <p><i class="ion-clock"></i> {{party.time}}</p>
+        <p><i class="ion-cash"></i> {{party.price}}</p>
+      </div>
+
+      <div class="item item-body">
+        <img class="full-image" src="delorean.jpg">
+        <p>{{party.description}}</p>
+      </div>
+    </div>
+  </ion-content>
 </ion-view>
