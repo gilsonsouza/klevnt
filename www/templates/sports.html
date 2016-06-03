@@ -1,10 +1,13 @@
 <ion-view title="Sports" id="page2" class=" ">
     <ion-content padding="true" class="has-header">
-        <ion-list id="sports-list2" class=" ">
-            <ion-item id="sports-list-item1" ui-sref="tabsController.page9" class="  ">12/05 - sport</ion-item>
-            <ion-item id="sports-list-item2" ui-sref="tabsController.page9" class="  ">12/05 - sport2</ion-item>
-            <ion-item id="sports-list-item3" ui-sref="tabsController.page9" class="  ">12/05 - sport3</ion-item>
+      <div ng-init="date = {day: getDatetime.getDate(), month: getDatetime.getMonth()+1, year: getDatetime.getFullYear()}"></div>
+        <ion-list id="sports-list3" class="">
+            <h3>Today ({{(date.day > 9)? date.day : "0" + date.day}}.{{(date.month > 9)? date.month : "0" + date.month}})</h3>
+            <ion-item ng-repeat="sport in sports | filter:date:strict" ng-click="setDetails(sport)">
+                <b><i class="ion-location" aria-hidden="true"></i> {{sport.local}}</b> 
+                <br />{{sport.name}}
+          </ul>
         </ion-list>
-        <a ui-sref="tabsController.allEvents" id="sports-button1" class=" button button-positive  button-block ">Upcomming events</a>
+        <a ui-sref="tabsController.allSports" id="sports-button2" class=" button button-positive  button-block ">Upcomming events</a>
     </ion-content>
 </ion-view>

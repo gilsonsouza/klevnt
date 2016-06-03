@@ -1,0 +1,11 @@
+<ion-view title="All Culture" id="page13" class=" ">
+      <ion-content padding="true" class="has-header">
+        <ion-list id="parties-list3" class=" ">
+            <ion-item ng-repeat="cultureEvent in cultureEvents | filter: filterDate()" ng-click="setDetails(cultureEvent)">
+              <i class="ion-calendar"></i> {{cultureEvent.day}}.{{cultureEvent.month}}.{{cultureEvent.year}}<br />
+              <i class="ion-location"></i><b> {{cultureEvent.local}}</b><br />
+              {{cultureEvent.name}}
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

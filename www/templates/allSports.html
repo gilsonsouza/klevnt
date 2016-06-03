@@ -1,0 +1,11 @@
+<ion-view title="All Sports" id="page12" class=" ">
+      <ion-content padding="true" class="has-header">
+        <ion-list id="parties-list3" class=" ">
+            <ion-item ng-repeat="sport in sports | filter: filterDate()" ng-click="setDetails(sport)">
+              <i class="ion-calendar"></i> {{sport.day}}.{{sport.month}}.{{sport.year}}<br />
+              <i class="ion-location"></i><b> {{sport.local}}</b><br />
+              {{sport.name}}
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

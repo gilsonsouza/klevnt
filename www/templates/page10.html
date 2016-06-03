@@ -1,7 +1,19 @@
-<ion-view title="" id="page10" class=" ">
-    <ion-content padding="true" class="has-header">
-        <div class="">
-            <img src="img/9k9me2QQyy3L1y4NYAug_maifete.jpg" width="100%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
-        </div>
-    </ion-content>
+<ion-view title="" id="page10" class="">
+  <ion-content padding="true" class="has-header">
+    <div class="list card">
+      <div class="item item-avatar">
+        <img src="mcfly.jpg">
+        <h2>{{cultureEvent.name}}</h2>
+        <p><i class="ion-calendar"></i> {{cultureEvent.day}}.{{cultureEvent.month}}.{{cultureEvent.year}}</p>
+        <p><i class="ion-location"></i> {{cultureEvent.local}} ({{cultureEvent.address}})</p>
+        <p><i class="ion-clock"></i> {{cultureEvent.time}}</p>
+        <p><i class="ion-cash"></i> {{cultureEvent.price}}</p>
+      </div>
+
+      <div class="item item-body">
+        <img class="full-image" src="delorean.jpg">
+        <p>{{cultureEvent.description}}</p>
+      </div>
+    </div>
+  </ion-content>
 </ion-view>

@@ -1,7 +1,14 @@
 angular.module('app.controllers', [])
 
-.controller('sportsCtrl', function($scope) {
-
+.controller('sportsCtrl', function($scope,$state, Sports, DetailsSport) {
+  $scope.sports = Sports;
+  $scope.getDatetime = new Date();
+  console.log($scope.getDatetime);
+  $scope.setDetails = function(sport)
+  {
+    DetailsSport.set(sport);
+    $state.go('tabsController.page9');
+  };
 })
 
 .controller('partiesCtrl', function($scope, $state, Parties, DetailsParty) {
@@ -12,25 +19,30 @@ angular.module('app.controllers', [])
   {
     DetailsParty.set(party);
     $state.go('tabsController.page5');
-    //and your redirection stuff goes here.
   };
 })
 
-.controller('cultureCtrl', function($scope) {
-
+.controller('cultureCtrl', function($scope,$state, CultureEvents, DetailsCulture) {
+  $scope.cultureEvents = CultureEvents;
+  $scope.getDatetime = new Date();
+  console.log($scope.getDatetime);
+  $scope.setDetails = function(culture)
+  {
+    DetailsCulture.set(culture);
+    $state.go('tabsController.page10');
+  };
 })
 
 .controller('page5Ctrl', function($scope, DetailsParty) {
   $scope.party = DetailsParty.get();
-  //console.log($scope.party);
 })
 
-.controller('page9Ctrl', function($scope) {
-
+.controller('page9Ctrl', function($scope, DetailsSport) {
+  $scope.sport = DetailsSport.get();
 })
 
-.controller('page10Ctrl', function($scope) {
-
+.controller('page10Ctrl', function($scope, DetailsCulture) {
+  $scope.cultureEvent = DetailsCulture.get();
 })
 
 .controller('allEventsCtrl', function($scope, Parties) {
@@ -50,6 +62,38 @@ angular.module('app.controllers', [])
       return ((item["year"] == date.getFullYear() && item["month"] > date.getMonth()
         && item["day"] >= date.getDate()) || item["year"] > date.getFullYear());
     }
-}
+  }
+})
+
+.controller('allSportsCtrl', function($scope, $state, Sports, DetailsSport) {
+  $scope.sports = Sports;
+  date = new Date();
+  $scope.setDetails = function(sport)
+  {
+    DetailsSport.set(sport);
+    $state.go('tabsController.page9');
+  };
+  $scope.filterDate = function(){
+    return function(item){
+      return ((item["year"] == date.getFullYear() && item["month"] > date.getMonth()
+        && item["day"] >= date.getDate()) || item["year"] > date.getFullYear());
+    }
+  }
+})
+
+.controller('allCultureCtrl', function($scope, $state, CultureEvents, DetailsCulture) {
+  $scope.cultureEvents = CultureEvents;
+  date = new Date();
+  $scope.setDetails = function(cultureEvent)
+  {
+    DetailsCulture.set(cultureEvent);
+    $state.go('tabsController.page10');
+  };
+  $scope.filterDate = function(){
+    return function(item){
+      return ((item["year"] == date.getFullYear() && item["month"] > date.getMonth()
+        && item["day"] >= date.getDate()) || item["year"] > date.getFullYear());
+    }
+  }
 
 })

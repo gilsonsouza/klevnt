@@ -3,20 +3,10 @@
       <div ng-init="date = {day: getDatetime.getDate(), month: getDatetime.getMonth()+1, year: getDatetime.getFullYear()}"></div>
         <ion-list id="parties-list3" class="">
         	<h3>Today ({{(date.day > 9)? date.day : "0" + date.day}}.{{(date.month > 9)? date.month : "0" + date.month}})</h3>
-            <!--<ul class="list">-->
             <ion-item ng-repeat="party in parties | filter:date:strict" ng-click="setDetails(party)">
-              <!--<li class="item">-->
               	<b><i class="ion-location" aria-hidden="true"></i> {{party.local}}</b> 
               	<br />{{party.name}}
-            	<!--</li>-->
-            <!--</ion-item>-->
           </ul>
-            <!-- {{party.getDate()}}/{{getDatetime.getMonth()+1}}/{{getDatetime.getFullYear()}} - {{party.name}}-->
-            <!--
-            <ion-item id="parties-list-item4" ui-sref="tabsController.page5" class="  ">12/05 - Maifete</ion-item>
-            <ion-item id="parties-list-item5" ui-sref="tabsController.page5" class="  ">12/05 - Latino's night</ion-item>
-            <ion-item id="parties-list-item6" ui-sref="tabsController.page5" class="  ">12/05 - Live rock band</ion-item>
-          -->
         </ion-list>
         <a ui-sref="tabsController.allParties" id="parties-button2" class=" button button-positive  button-block ">Upcomming events</a>
     </ion-content>
