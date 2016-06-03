@@ -2,7 +2,7 @@
     <ion-content padding="true" class="has-header">
       <div ng-init="date = {day: getDatetime.getDate(), month: getDatetime.getMonth()+1, year: getDatetime.getFullYear()}"></div>
         <ion-list id="parties-list3" class="">
-        	<h3>Today ({{date.day}}.{{(date.month > 9)? date.month : "0" + date.month}})</h3>
+        	<h3>Today ({{(date.day > 9)? date.day : "0" + date.day}}.{{(date.month > 9)? date.month : "0" + date.month}})</h3>
             <!--<ul class="list">-->
             <ion-item ng-repeat="party in parties | filter:date:strict" ng-click="setDetails(party)">
               <!--<li class="item">-->
@@ -18,6 +18,6 @@
             <ion-item id="parties-list-item6" ui-sref="tabsController.page5" class="  ">12/05 - Live rock band</ion-item>
           -->
         </ion-list>
-        <a ui-sref="tabsController.allEvents" id="parties-button2" class=" button button-positive  button-block ">Upcomming events</a>
+        <a ui-sref="tabsController.allParties" id="parties-button2" class=" button button-positive  button-block ">Upcomming events</a>
     </ion-content>
 </ion-view>

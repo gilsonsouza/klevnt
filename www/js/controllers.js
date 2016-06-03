@@ -34,12 +34,17 @@ angular.module('app.controllers', [])
 })
 
 .controller('allEventsCtrl', function($scope, Parties) {
-  //$scope.parties = Parties;
+
 
 })
-.controller('allPartiesCtrl', function($scope, Parties) {
+.controller('allPartiesCtrl', function($scope, $state, Parties, DetailsParty) {
   $scope.parties = Parties;
   date = new Date();
+  $scope.setDetails = function(party)
+  {
+    DetailsParty.set(party);
+    $state.go('tabsController.page5');
+  };
   $scope.filterDate = function(){
     return function(item){
       return ((item["year"] == date.getFullYear() && item["month"] > date.getMonth()

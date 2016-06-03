@@ -76,6 +76,36 @@ angular.module('app.routes', ['ionicUIRouter'])
     abstract:true
   })
 
+  .state('tabsController.allParties', {
+    url: '/allParties',
+    views: {
+      'tab3': {
+        templateUrl: 'templates/allParties.html',
+        controller: 'allPartiesCtrl'
+      }
+    }
+  })
+
+  .state('tabsController.allSports', {
+    url: '/allSports',
+    views: {
+      'tab4': {
+        templateUrl: 'templates/allSports.html',
+        controller: 'allSportsCtrl'
+      }
+    }
+  })
+
+  .state('tabsController.allCulture', {
+    url: '/allCulture',
+    views: {
+      'tab5': {
+        templateUrl: 'templates/allCulture.html',
+        controller: 'allCultureCtrl'
+      }
+    }
+  })
+
   /*
     The IonicUIRouter.js UI-Router Modification is being used for this route.
     To navigate to this route, do NOT use a URL. Instead use one of the following:
@@ -89,7 +119,7 @@ angular.module('app.routes', ['ionicUIRouter'])
       /parties/tab3/allevents
       /parties/tab4/allevents
       /parties/tab5/allevents
-  */
+  
   .state('tabsController.allEvents', {
     url: '/allevents',
     views: {
@@ -107,6 +137,7 @@ angular.module('app.routes', ['ionicUIRouter'])
       }
     }
   })
+  */
 
 $urlRouterProvider.otherwise('/parties/parties')
 
