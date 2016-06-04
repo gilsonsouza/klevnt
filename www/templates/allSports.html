@@ -1,10 +1,22 @@
 <ion-view title="All Sports" id="page12" class=" ">
-      <ion-content padding="true" class="has-header">
+    <ion-content padding="true" class="has-header">
         <ion-list id="parties-list3" class=" ">
-            <ion-item ng-repeat="sport in sports | filter: filterDate()" ng-click="setDetails(sport)">
+            <div class="row" id="divFilter">
+              <div class="col list list-inset">
+                <label class="item item-input">
+                  <i class="icon ion-search placeholder-icon"></i>
+                  <input type="text" placeholder="Search" ng-model="search" ng-change="filter()" class="filter" />
+                </label>
+              </div>
+              <div class="col col-center text-right">Showing {{ filtered.length }} of {{ totalItems}}</div>
+            </div>
+            <ion-item ng-repeat="sport in filtered = (sports | filter: filterDate() | filter: search | orderBy : predicate)" ng-click="setDetails(sport)" ng-show="filtered.length > 0">
               <i class="ion-calendar"></i> {{sport.day}}.{{sport.month}}.{{sport.year}}<br />
               <i class="ion-location"></i><b> {{sport.local}}</b><br />
               {{sport.name}}
+            </ion-item>
+            <ion-item ng-show="filtered.length == 0">
+                <h4 class="text-center">No sport events found</h4>
             </ion-item>
         </ion-list>
     </ion-content>

@@ -1,9 +1,9 @@
 <ion-view title="Culture" id="page8" class=" ">
     <ion-content padding="true" class="has-header">
-      <div ng-init="date = {day: getDatetime.getDate(), month: getDatetime.getMonth()+1, year: getDatetime.getFullYear()}"></div>
+      <div ng-init="date = {day: today.getDate(), month: today.getMonth()+1, year: today.getFullYear()}"></div>
         <ion-list id="culture-list3" class="">
-            <h3>Today ({{(culture.day > 9)? date.day : "0" + date.day}}.{{(date.month > 9)? date.month : "0" + date.month}})</h3>
-            <ion-item ng-repeat="cultureEvent in cultureEvents | filter:date:strict" ng-click="setDetails(cultureEvent)">
+            <h3>Today ({{(date.day > 9)? date.day : "0" + date.day}}.{{(date.month > 9)? date.month : "0" + date.month}})</h3>
+            <ion-item ng-repeat="cultureEvent in cultureEvents | filter:filterDate()" ng-click="setDetails(cultureEvent)">
                 <b><i class="ion-location" aria-hidden="true"></i> {{cultureEvent.local}}</b> 
                 <br />{{cultureEvent.name}}
           </ul>
