@@ -3,7 +3,12 @@ angular.module('app.controllers', [])
 .controller('sportsCtrl', function($scope,$state, Sports, DetailsSport) {
   $scope.sports = Sports;
   $scope.getDatetime = new Date();
-  console.log($scope.getDatetime);
+  $scope.filterToday  = function(){
+    return function(party)
+    {
+    return (party.day == $scope.getDatetime.getDate() && party.month == $scope.getDatetime.getMonth()+1 && party.year == $scope.getDatetime.getFullYear())
+    }
+  };
   $scope.setDetails = function(sport)
   {
     DetailsSport.set(sport);
@@ -15,6 +20,12 @@ angular.module('app.controllers', [])
   $scope.parties = Parties;
   $scope.getDatetime = new Date();
   console.log($scope.getDatetime);
+  $scope.filterToday  = function(){
+    return function(party)
+    {
+    return (party.day == $scope.getDatetime.getDate() && party.month == $scope.getDatetime.getMonth()+1 && party.year == $scope.getDatetime.getFullYear())
+    }
+  };
   $scope.setDetails = function(party)
   {
     DetailsParty.set(party);
@@ -25,7 +36,12 @@ angular.module('app.controllers', [])
 .controller('cultureCtrl', function($scope,$state, CultureEvents, DetailsCulture) {
   $scope.cultureEvents = CultureEvents;
   $scope.getDatetime = new Date();
-  console.log($scope.getDatetime);
+  $scope.filterToday  = function(){
+    return function(cultureEvent)
+    {
+    return (cultureEvent.day == $scope.getDatetime.getDate() && cultureEvent.month == $scope.getDatetime.getMonth()+1 && cultureEvent.year == $scope.getDatetime.getFullYear())
+    }
+  };
   $scope.setDetails = function(culture)
   {
     DetailsCulture.set(culture);
@@ -60,7 +76,8 @@ angular.module('app.controllers', [])
   $scope.filterDate = function(){
     return function(item){
       return ((item["year"] == date.getFullYear() && item["month"] > date.getMonth()
-        && item["day"] >= date.getDate()) || item["year"] > date.getFullYear());
+        && item["day"] >= date.getDate()) || (item["year"] == date.getFullYear() && item["month"] > date.getMonth()+1)
+        || item["year"] > date.getFullYear());
     }
   }
 })
@@ -76,7 +93,8 @@ angular.module('app.controllers', [])
   $scope.filterDate = function(){
     return function(item){
       return ((item["year"] == date.getFullYear() && item["month"] > date.getMonth()
-        && item["day"] >= date.getDate()) || item["year"] > date.getFullYear());
+        && item["day"] >= date.getDate()) || (item["year"] == date.getFullYear() && item["month"] > date.getMonth()+1)
+        || item["year"] > date.getFullYear());
     }
   }
 })
@@ -92,7 +110,8 @@ angular.module('app.controllers', [])
   $scope.filterDate = function(){
     return function(item){
       return ((item["year"] == date.getFullYear() && item["month"] > date.getMonth()
-        && item["day"] >= date.getDate()) || item["year"] > date.getFullYear());
+        && item["day"] >= date.getDate()) || (item["year"] == date.getFullYear() && item["month"] > date.getMonth()+1)
+         || item["year"] > date.getFullYear());
     }
   }
 

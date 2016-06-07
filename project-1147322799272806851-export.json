@@ -1,0 +1,61 @@
+{
+  "culture" : [ {
+    "address" : "",
+    "date" : "2016-06-04",
+    "day" : 4,
+    "description" : "Egal ob Food Truck, Küchenchef oder passionierter Hobby-Koch – bei einem Street Food Festival kommen verschiedene Kulturen, Generationen und soziale Schichten an einem Ort zusammen und bieten besondere und internationale Genüsse aus der ganzen Welt an. Ein Fest ganz im Zeichen des internationalen kulinarischen Genusses.",
+    "local" : "Betzenberg - Stadiom FC KL",
+    "month" : 6,
+    "name" : "Street Food Festival",
+    "time" : "12:00",
+    "price" : "3,00",
+    "year" : 2016
+  }, {
+    "address" : "",
+    "date" : "2016-06-04",
+    "day" : 5,
+    "description" : "Egal ob Food Truck, Küchenchef oder passionierter Hobby-Koch – bei einem Street Food Festival kommen verschiedene Kulturen, Generationen und soziale Schichten an einem Ort zusammen und bieten besondere und internationale Genüsse aus der ganzen Welt an. Ein Fest ganz im Zeichen des internationalen kulinarischen Genusses.",
+    "local" : "Betzenberg - Stadiom FC KL",
+    "month" : 6,
+    "name" : "Street Food Festival",
+    "time" : "12:00",
+    "price" : "3,00",
+    "year" : 2016
+  }],
+  "parties" :
+  {"party1" : {
+    "address" : "Eselsfürth 11",
+    "date" : "2016-06-04",
+    "day" : 4,
+    "description" : "Die Konzertreihe „Night of Guitars“ verfolgt nach einer Idee des Gitarristen Ender „Don“ Irkdas ein interessantes Konzept: mehrere Gitarristen verschiedener Stylistiken und Musikrichtungen spielen Songs ihrer eigenen Vorbilder querbeet durch die Geschichte der Musik – Klassiker, Standards und aktuelle Hits, die auch dem breiten Publikum bekannt sind-Zudem Stücke für Insider der (Gitarren) Musik.<br>Hier ist es gewünscht, dass die Gitarristen, die den Song ausgesucht haben, diesen möglichst auch selbst singen.",
+    "local" : "Irish House",
+    "month" : 6,
+    "name" : "NIGHT OF GUITARS",
+    "price" :"" ,
+    "time" : "21:00",
+    "year" : 2016
+  }},
+  "sports" : [ {
+    "address" : "",
+    "date" : "2016-06-07",
+    "day" : 7,
+    "description" : "Bei schönem Wetter immer dienstags ab 17 Uhr auf dem Grillplatz am Unisport!<br>Sonne, eine Hängematte im Grünen, coole Musik, ein kühler Drink in der linken, eine leckere Bratwurst in der rechten Hand und um dich rum nur entspannte Leute – Das ist Chill & Grill! Und genau das kannst du – wenn denn das Wetter mitspielt – jeden Dienstag auf dem Grillplatz neben unserem Beach-Volleyball-Feld haben! Für dich heißt es lediglich: eigenes Grillgut mitbringen – für den Rest sorgen wir! Also raus aus der Bib‘ oder dem Büro und rein in den Feierabend, um in entspannter Atmosphäre die Seele baumeln zu lassen.",
+    "local" : "Grillplatz UNISPORT",
+    "month" : 6,
+    "name" : "Chill & Grill",
+    "price" : "Kostenlos",
+    "time" : "21:00",
+    "year" : 2016
+  }, {
+    "address" : "",
+    "date" : "2016-06-04",
+    "day" : 4,
+    "description" : "Wir wollen im Juni auch Samstags die Pforten für euch öffnen, also kommt vorbei und treibt Sport! ;-)",
+    "local" : "Unisport",
+    "month" : 6,
+    "name" : "Wir öffnen jetzt auch Samstags!",
+    "price" : "",
+    "time" : "8:00",
+    "year" : 2016
+  } ]
+}

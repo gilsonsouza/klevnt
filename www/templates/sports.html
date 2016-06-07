@@ -3,8 +3,8 @@
       <div ng-init="date = {day: getDatetime.getDate(), month: getDatetime.getMonth()+1, year: getDatetime.getFullYear()}"></div>
         <ion-list id="sports-list3" class="">
             <h3>Today ({{(date.day > 9)? date.day : "0" + date.day}}.{{(date.month > 9)? date.month : "0" + date.month}})</h3>
-            <ion-item ng-repeat="sport in sports | filter:date:strict" ng-click="setDetails(sport)">
-                <b><i class="ion-location" aria-hidden="true"></i> {{sport.local}}</b> 
+            <ion-item ng-repeat="sport in sports | filter:filterToday()" ng-click="setDetails(sport)">
+                <b><i class="ion-location" aria-hidden="true"></i> {{sport.local}}</b>
                 <br />{{sport.name}}
           </ul>
         </ion-list>

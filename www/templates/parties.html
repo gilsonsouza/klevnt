@@ -3,8 +3,8 @@
       <div ng-init="date = {day: getDatetime.getDate(), month: getDatetime.getMonth()+1, year: getDatetime.getFullYear()}"></div>
         <ion-list id="parties-list3" class="">
         	<h3>Today ({{(date.day > 9)? date.day : "0" + date.day}}.{{(date.month > 9)? date.month : "0" + date.month}})</h3>
-            <ion-item ng-repeat="party in parties | filter:date:strict" ng-click="setDetails(party)">
-              	<b><i class="ion-location" aria-hidden="true"></i> {{party.local}}</b> 
+            <ion-item ng-repeat="party in parties | filter: filterToday()" ng-click="setDetails(party)">
+              	<b><i class="ion-location" aria-hidden="true"></i> {{party.local}}</b>
               	<br />{{party.name}}
           </ul>
         </ion-list>
