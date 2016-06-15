@@ -23,17 +23,6 @@
   used under CC BY http://creativecommons.org/licenses/by/4.0/
   Modified icons to fit ionicon’s grid from original.
 */
-.img-sport{
-  background-image: url('/img/sport.jpg');
-}
-
-.img-culture{
-  background-image: url('/img/culture.jpg');
-}
-
-.img-party{
-  background-image: url('/img/party.jpg');
-}
 
 .text-white{
   color: white;

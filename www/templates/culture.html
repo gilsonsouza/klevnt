@@ -1,4 +1,5 @@
-<ion-view title="Culture" id="page8" class="img-culture">
+<ion-view title="Culture" id="page8" class="img-culture" style="background: url(img/culture.jpg) center;background-size:cover;>
+  <div ng-init="date = {day: getDatetime.getDate(), month: getDatetime.getMonth()+1, year: getDatetime.getFullYear()}"></div>
     <ion-content padding="true" class="has-header">
       <div ng-init="date = {day: today.getDate(), month: today.getMonth()+1, year: today.getFullYear()}"></div>
         <ion-list id="culture-list3" class="">
@@ -8,6 +9,6 @@
                 <br />{{cultureEvent.name}}
           </ul>
         </ion-list>
-        <a ui-sref="tabsController.allCulture" id="culture-button2" class=" button button-positive  button-block ">Upcomming events</a>
+        <a ui-sref="tabsController.allCulture" id="culture-button2" class=" button button-positive  button-block ">Upcoming events</a>
     </ion-content>
 </ion-view>
