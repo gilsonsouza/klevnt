@@ -5,7 +5,10 @@
         <img src="img/culture_icon.png">
         <h2>{{cultureEvent.name}}</h2>
         <p><i class="ion-calendar"></i> {{cultureEvent.day}}.{{cultureEvent.month}}.{{cultureEvent.year}}</p>
-        <p><i class="ion-location"></i> {{cultureEvent.local}} ({{cultureEvent.address}})</p>
+        <p ng-click="setUrl(cultureEvent)"><i class="ion-location"></i> <a>{{cultureEvent.local}} ({{cultureEvent.address}})</a></p>
+        <!-- <a class="maps" onclick="window.open('https://www.google.de/maps/search/' + {{cultureEvent.address}}, '_system', 'location=yes')">
+            Open a Browser
+        </a> -->
         <p><i class="ion-clock"></i> {{cultureEvent.time}}</p>
         <p><i class="ion-cash"></i> {{cultureEvent.price}}</p>
       </div>

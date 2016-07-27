@@ -47,18 +47,31 @@ angular.module('app.controllers', [])
     DetailsCulture.set(culture);
     $state.go('tabsController.page10');
   };
+
 })
 
 .controller('page5Ctrl', function($scope, DetailsParty) {
   $scope.party = DetailsParty.get();
+  $scope.setUrl = function(party)
+  {
+    window.open('https://www.google.de/maps/search/' + party.address, "_system");
+  };
 })
 
 .controller('page9Ctrl', function($scope, DetailsSport) {
   $scope.sport = DetailsSport.get();
+  $scope.setUrl = function(sport)
+  {
+    window.open('https://www.google.de/maps/search/' + sport.address, "_system");
+  };
 })
 
-.controller('page10Ctrl', function($scope, DetailsCulture) {
+.controller('page10Ctrl', function($scope, $location, DetailsCulture) {
   $scope.cultureEvent = DetailsCulture.get();
+  $scope.setUrl = function(culture)
+  {
+    window.open('https://www.google.de/maps/search/' + culture.address, "_system");
+  };
 })
 
 .controller('allEventsCtrl', function($scope, Parties) {

@@ -5,7 +5,7 @@
         <img src="img/Sports_icon.png">
         <h2>{{sport.name}}</h2>
         <p><i class="ion-calendar"></i> {{sport.day}}.{{sport.month}}.{{sport.year}}</p>
-        <p><i class="ion-location"></i> {{sport.local}} ({{sport.address}})</p>
+        <p ng-click="setUrl(sport)"><i class="ion-location"></i> <a>{{sport.local}} ({{sport.address}})</a></p>
         <p><i class="ion-clock"></i> {{sport.time}}</p>
         <p><i class="ion-cash"></i> {{sport.price}}</p>
       </div>
