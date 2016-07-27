@@ -1,8 +1,8 @@
 <ion-view title="Parties" id="page7" class="img-party">
-    <ion-content padding="true" class="has-header" style="background: url(img/party.jpg) left;background-size:cover;" >
+    <ion-content padding="true" class="has-header" style="background: url(img/party.jpg) center;background-size:cover;" >
       <div ng-init="date = {day: getDatetime.getDate(), month: getDatetime.getMonth()+1, year: getDatetime.getFullYear()}"></div>
         <ion-list id="parties-list3" class="">
-        	<h3 class="text-white">Today ({{(date.day > 9)? date.day : "0" + date.day}}.{{(date.month > 9)? date.month : "0" + date.month}})</h3>
+        	<h3 class="text-black">Today ({{(date.day > 9)? date.day : "0" + date.day}}.{{(date.month > 9)? date.month : "0" + date.month}})</h3>
             <ion-item ng-repeat="party in parties | filter:filterToday()" ng-click="setDetails(party)">
               	<b><i class="ion-location" aria-hidden="true"></i> {{party.local}}</b>
               	<br />{{party.name}}
